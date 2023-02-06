@@ -1,0 +1,37 @@
+﻿Relatório 
+
+Disposição dos dados
+O código foi feito a partir da orientação a objetos, contendo 2 classes e uma estrutura 
+struct Vértice: Estrutura onde fica armazenado os dados de cada vértice.
+
+
+Classe Grafo:
+Classe onde ficam localizados a lista de adjacências, os atributos de cada vértice e as funções de verificação de solução e gerar uma solução aleatoriamente.
+
+
+Classe Empresa:
+Classe onde fica armazenado todos os nomes das instâncias, os dados do cabeçalho e a função de abrir as instâncias e montar a lista de adjacências.
+
+
+Função Main:
+A função main apenas faz o pontapé inicial do programa, instanciando uma nova empresa e fazendo a chamada da abertura de instâncias.
+
+
+Descrição do programa
+
+
+Função de abrir instâncias:
+A função contém um laço externo de 30 repetições, corresponde a cada arquivo de instância. A cada repetição, será aberta uma instância e será feita a leitura de dados.
+Os laços internos estão dispostos da seguinte forma: 
+O primeiro laço, de tamanho 10, corresponde ao cabeçalho do arquivo, contendo as informações da instância. Será lida linha por linha do arquivo e a cada linha, concatenando os caracteres até formar a primeira palavra que corresponde a chave. O restante da linha será salvo no atributo de mesmo nome. Após a leitura de todas as linhas, descarte a palavra NODES.
+Como já possui a quantidade de vértices, é criada uma instância da classe Grafo, inicializando a lista de adjacências e lista de atributos.
+O segundo laço, de tamanho correspondente ao número de vértices, salva os atributos de cada vértice na lista de atributos. Após ler todos os vértices, descarte a palavra EDGES.
+O último laço preenche a lista de adjacências, onde cada vértice possui uma ligação com todos os outros e um tempo de percurso.
+
+
+Função gerar solução aleatória:
+Na função de gerar solução aleatória, é gerado um número aleatório de caminhões que seguirá uma sequência aleatória de vértices.
+
+
+Função verificar solução gerada:
+A função de verificar a solução testa todas as restrições no enunciado do problema, caso não infringe nenhuma restrição, retorna verdadeiro para a solução, caso contrário, retorna falso.
